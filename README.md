@@ -2,6 +2,8 @@
 # Awfully-Typed
 
 Template to create typescript rotations for https://awful.wtf
+
+
 ## Installation
 
 [Node.js](https://nodejs.org/) \
@@ -17,6 +19,10 @@ Choose a project name and change 'myWork' to it
 - In file 'package.json' there is two 'ROJECT_NAME=myWork'
 - File name for 'src/myWork.ts'
 - In file 'src/global.d.ts' the var name 'declare const myWork: IMyWork;'
+
+And I advise you to create a symlink between the dist folder & a folder for the project in awful/routines
+
+
 ## Usage
 
 Dev with hot reload
@@ -33,6 +39,8 @@ Clean build folder
 ```bash
 pnpm clean
 ```
+
+
 ## Documentation
 
 [TypescriptToLua](https://typescripttolua.github.io/) \
@@ -42,6 +50,8 @@ pnpm clean
 Don't:
 - Use default export (will break auto awful env handler)
 - Use import as (will break auto awful env handler)
+
+
 ## Support
 
 For support, pm AQ#2026 on discord or https://discord.gg/MsmcD8vpMZ
