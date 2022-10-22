@@ -2,6 +2,7 @@
   "load": [
     "lualib_bundle",
     "system",
-    "myWork"
+    "myWork",
+    "gui"
   ]
 }
