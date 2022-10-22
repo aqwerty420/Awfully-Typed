@@ -23,7 +23,7 @@ Choose a project name and change 'myWork' to it
 
 And I advise you to create a symlink between the dist folder & a folder for the project in awful/routines
 
-To keep your nodejs dependencies automaticly update use:
+To keep your nodejs dependencies automatically updated, use:
 [renovabot](https://github.com/apps/renovate)
 
 
