@@ -22,6 +22,9 @@ Choose a project name and change 'myWork' to it
 
 And I advise you to create a symlink between the dist folder & a folder for the project in awful/routines
 
+To keep your nodejs dependencies automaticly update use:
+[renovabot](https://github.com/apps/renovate)
+
 
 ## Usage
 
@@ -50,6 +53,18 @@ pnpm clean
 Don't:
 - Use default export (will break auto awful env handler)
 - Use import as (will break auto awful env handler)
+
+
+## Deployment
+
+To deploy your project on awful you need to create a new repository which will hold your project transpiled code.
+
+Then change in '.github/workflows/CD.yml'
+ - 'YOUR_GITHUB_USERNAME'
+ - 'TARGET_REPOSITORY_NAME'
+ - 'YOUR_MAIL'
+
+ And create a github secret for the repository with the name 'API_TOKEN_GITHUB'
 
 
 ## Support
