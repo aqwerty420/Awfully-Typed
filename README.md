@@ -18,7 +18,8 @@ Install dependencies
 Choose a project name and change 'myWork' to it
 - In file 'package.json' there is two 'ROJECT_NAME=myWork'
 - File name for 'src/myWork.ts'
-- In file 'src/global.d.ts' the var name 'declare const myWork: IMyWork;'
+- In file 'src/global.d.ts' the var name 'declare const myWork: IMyWork'
+- In file 'awful-config.json'
 
 And I advise you to create a symlink between the dist folder & a folder for the project in awful/routines
 
