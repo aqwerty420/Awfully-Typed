@@ -15,6 +15,7 @@
     "noImplicitSelf": true,
     "noImplicitGlobalVariables": true,
     "luaTarget": "5.1",
+    "luaLibImport": "require",
     "luaPlugins": [
       // Clean useless code
       { "name": "./plugins/cleaner.ts" },
@@ -27,7 +28,9 @@
       // Wrap protected functions calls
       { "name": "./plugins/protected.ts" },
       // Populate lualib to awful
-      { "name": "./plugins/lualib.ts" }
+      { "name": "./plugins/lualib.ts" },
+      // Copy loader
+      { "name": "./plugins/load.ts" }
     ]
   },
   "exclude": ["plugins/**/*", "node_modules/**/*", "dist/**/*"]
