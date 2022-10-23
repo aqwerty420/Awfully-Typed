@@ -1,7 +1,7 @@
 
 # Awfully-Typed
 
-Template to create typescript rotations for https://awful.wtf
+Template to create typescript rotations for [Awful](https://awful.wtf)
 
 
 ## Installation
