@@ -65,7 +65,7 @@ Then change in '.github/workflows/CD.yml'
  - 'TARGET_REPOSITORY_NAME'
  - 'YOUR_MAIL'
 
- And create a [https://github.com/settings/tokens](github secret) for the repository with the name 'API_TOKEN_GITHUB'
+ And create a [github secret](https://github.com/settings/tokens) for the repository with the name 'API_TOKEN_GITHUB'
 
 
 ## Support
