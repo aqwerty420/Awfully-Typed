@@ -12,7 +12,7 @@ Template to create typescript rotations for [Awful](https://awful.wtf)
 
 Install dependencies
 ```bash
-  pnpm i
+pnpm i
 ```
 
 Choose a project name and change 'myWork' to it
