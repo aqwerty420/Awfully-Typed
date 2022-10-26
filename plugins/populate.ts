@@ -39,7 +39,7 @@ const plugin: tstl.Plugin = {
 
     for (const file of result) {
       let toPopulate = '';
-      const exports = file.code.match(/^____exports.*\n?/gm);
+      const exports = file.code.match(/^____exports\..* = .*$/gm);
 
       if (exports != null) {
         for (const export_ of exports) {

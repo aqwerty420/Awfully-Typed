@@ -2,6 +2,8 @@ import { env } from 'process';
 import ts from 'typescript';
 import * as tstl from 'typescript-to-lua';
 
+const toInject = `local Unlocker, awful, ${env.PROJECT_NAME} = ...\n\n`;
+
 const plugin: tstl.Plugin = {
   beforeEmit(
     program: ts.Program,
@@ -14,9 +16,7 @@ const plugin: tstl.Plugin = {
     void emitHost;
 
     for (const file of result) {
-      if (!file.outputPath.includes('load'))
-        file.code =
-          `local Unlocker, awful, ${env.PROJECT_NAME} = ...\n\n` + file.code;
+      file.code = toInject + file.code;
     }
   },
 };
