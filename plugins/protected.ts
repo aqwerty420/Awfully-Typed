@@ -25,6 +25,11 @@ const plugin: tstl.Plugin = {
     for (const file of result) {
       for (const protectedFunction of protectedList) {
         file.code = file.code.replace(
+          new RegExp(`(${protectedFunction}\\(\\))`, 'g'),
+          `${env.PROJECT_NAME}.callProtectedFunction("${protectedFunction}")`
+        );
+
+        file.code = file.code.replace(
           new RegExp(`(${protectedFunction}\\()`, 'g'),
           `${env.PROJECT_NAME}.callProtectedFunction("${protectedFunction}", `
         );
