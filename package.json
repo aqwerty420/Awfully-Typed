@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@typescript-to-lua/language-extensions": "1.0.0",
-    "awful-types": "1.2.0",
+    "awful-types": "1.2.3",
     "cross-env": "7.0.3",
     "lua-types": "2.13.0",
     "ts-node": "10.9.1",
@@ -20,7 +20,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",
-    "@types/node": "18.11.6",
+    "@types/node": "18.11.7",
     "@typescript-eslint/eslint-plugin": "5.41.0",
     "@typescript-eslint/parser": "5.41.0",
     "eslint": "8.26.0",
