@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@typescript-to-lua/language-extensions": "1.0.0",
-    "awful-types": "1.2.3",
+    "awful-types": "1.4.5",
     "cross-env": "7.0.3",
     "lua-types": "2.13.0",
     "ts-node": "10.9.1",
@@ -18,11 +18,11 @@
     "typescript-to-lua": "1.10.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.1.2",
-    "@commitlint/config-conventional": "17.1.0",
-    "@types/node": "18.11.7",
-    "@typescript-eslint/eslint-plugin": "5.41.0",
-    "@typescript-eslint/parser": "5.41.0",
+    "@commitlint/cli": "17.2.0",
+    "@commitlint/config-conventional": "17.2.0",
+    "@types/node": "18.11.9",
+    "@typescript-eslint/eslint-plugin": "5.42.0",
+    "@typescript-eslint/parser": "5.42.0",
     "eslint": "8.26.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.2.1",
@@ -30,7 +30,7 @@
     "lint-staged": "13.0.3",
     "prettier": "2.7.1",
     "rimraf": "3.0.2",
-    "tslib": "2.4.0"
+    "tslib": "2.4.1"
   },
   "lint-staged": {
     "*.ts": [
