@@ -17,8 +17,6 @@
     "luaTarget": "5.1",
     "luaLibImport": "require",
     "luaPlugins": [
-      // Clean useless code
-      { "name": "./plugins/cleaner.ts" },
       // Inject Unlocker, awful, project
       { "name": "./plugins/inject.ts" },
       // Handle lua require to awful env

@@ -26,12 +26,12 @@ const plugin: tstl.Plugin = {
       for (const protectedFunction of protectedList) {
         file.code = file.code.replace(
           new RegExp(`(${protectedFunction}\\(\\))`, 'g'),
-          `${env.PROJECT_NAME}.callProtectedFunction("${protectedFunction}")`
+          `${env.PROJECT_NAME}.system.callProtectedFunction("${protectedFunction}")`
         );
 
         file.code = file.code.replace(
           new RegExp(`(${protectedFunction}\\()`, 'g'),
-          `${env.PROJECT_NAME}.callProtectedFunction("${protectedFunction}", `
+          `${env.PROJECT_NAME}.system.callProtectedFunction("${protectedFunction}", `
         );
       }
     }

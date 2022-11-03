@@ -3,26 +3,9 @@ import ts from 'typescript';
 import * as tstl from 'typescript-to-lua';
 
 const basePopulate = 'awful.Populate(\n    {\n';
-const endPopulate = `    },\n    ${env.PROJECT_NAME},\n    getfenv(1)\n)`;
+const endPopulate = `\n    },\n    ${env.PROJECT_NAME},\n    getfenv(1)\n)`;
+
 const toReplace = 'return ____exports';
-const toRemoveNoPopulate = 'local ____exports = {}\n';
-
-interface PopulateElement {
-  name: string;
-  file: string;
-}
-
-class Populated {
-  private elements: PopulateElement[] = [];
-
-  public add(name: string, file: string): void {
-    this.elements.push({ name, file });
-  }
-
-  public get(name: string): PopulateElement | undefined {
-    return this.elements.find((element) => element.name === name);
-  }
-}
 
 const plugin: tstl.Plugin = {
   beforeEmit(
@@ -35,35 +18,19 @@ const plugin: tstl.Plugin = {
     void options;
     void emitHost;
 
-    const populated = new Populated();
+    const distPath = emitHost.getCurrentDirectory() + '\\dist\\';
 
     for (const file of result) {
-      let toPopulate = '';
-      const exports = file.code.match(/^____exports\..* = .*$/gm);
+      if (!file.code.includes(toReplace)) continue;
 
-      if (exports != null) {
-        for (const export_ of exports) {
-          const vareValue = export_.split(' ')[0];
-          const vareName = vareValue.split('____exports.')[1];
+      const filePath = file.outputPath
+        .replace(distPath, '')
+        .replace('.lua', '');
 
-          const alreadypopulated = populated.get(vareName);
-          if (alreadypopulated) {
-            console.warn(
-              `Element '${vareName}' is populated in '${alreadypopulated.file}' and '${file.outputPath}'`
-            );
-          }
-          populated.add(vareName, file.outputPath);
-          toPopulate += `        ${vareName} = ${vareValue},\n`;
-        }
-      }
-
-      const replacement =
-        toPopulate === '' ? '' : basePopulate + toPopulate + endPopulate;
-      file.code = file.code.replace(toReplace, replacement);
-
-      if (toPopulate === '') {
-        file.code = file.code.replace(toRemoveNoPopulate, '');
-      }
+      file.code = file.code.replace(
+        toReplace,
+        `${basePopulate}        ["${filePath}"] = ____exports,${endPopulate}`
+      );
     }
   },
 };

@@ -21,18 +21,14 @@ const plugin: tstl.Plugin = {
       if (file.outputPath.includes('lualib_bundle.lua')) {
         const matches = file.code.match(/^.*return\s\{[\s\S]*?^.*\}.*\n?/gm);
 
-        if (matches != null) {
-          const lastMatch = matches[matches.length - 1];
+        if (matches == null) continue;
+        const toReplace = matches[matches.length - 1];
+        const newContent = toReplace.replace('return', 'local ____exports =');
 
-          const content = lastMatch
-            .replace('return {\n', '')
-            .replace('}\n', '');
-
-          file.code = file.code.replace(
-            lastMatch,
-            basePopulate + content + endPopulate
-          );
-        }
+        file.code = file.code.replace(toReplace, newContent);
+        file.code =
+          file.code +
+          `\n${basePopulate}        ["lualib_bundle"] = ____exports,\n${endPopulate}`;
       }
     }
   },
