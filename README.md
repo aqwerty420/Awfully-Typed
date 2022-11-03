@@ -51,11 +51,6 @@ pnpm clean
 [Awful](https://www.awful.wtf/docs)
 
 
-Don't:
-- Use default export (will break auto awful env handler)
-- Use import as (will break auto awful env handler)
-
-
 ## Deployment
 
 To deploy your project on awful you need to create a new repository which will hold your project transpiled code.
