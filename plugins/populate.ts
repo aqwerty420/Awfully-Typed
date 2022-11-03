@@ -25,7 +25,10 @@ const plugin: tstl.Plugin = {
 
       const filePath = file.outputPath
         .replace(distPath, '')
-        .replace('.lua', '');
+        .replace('.lua', '')
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        .replaceAll('\\', '.');
 
       file.code = file.code.replace(
         toReplace,
