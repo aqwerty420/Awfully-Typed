@@ -56,9 +56,9 @@ pnpm clean
 To deploy your project on awful you need to create a new repository which will hold your project transpiled code.
 
 Then change in '.github/workflows/CD.yml'
- - 'YOUR_GITHUB_USERNAME'
- - 'TARGET_REPOSITORY_NAME'
- - 'YOUR_MAIL'
+ - 'aqwerty420' to your github username
+ - 'Awfully-Typed-Build' to your target repository
+ - 'aqwerty420@protonmail.com' to your email
 
  And create a [github secret](https://github.com/settings/tokens) for the repository and store it with the name 'API_TOKEN_GITHUB'
 

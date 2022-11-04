@@ -53,7 +53,7 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           source-directory: 'dist'
-          destination-github-username: 'YOUR_GITHUB_USERNAME'
-          destination-repository-name: 'TARGET_REPOSITORY_NAME'
-          user-email: YOUR_MAIL
+          destination-github-username: 'aqwerty420'
+          destination-repository-name: 'Awfully-Typed-Build'
+          user-email: aqwerty420@protonmail.com
           target-branch: main
