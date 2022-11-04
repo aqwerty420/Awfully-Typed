@@ -21,20 +21,14 @@ const plugin: tstl.Plugin = {
     for (const file of result) {
       if (!file.code.includes(toReplace)) continue;
 
-      const path = file.outputPath.split('\\');
-      const index = path.indexOf('dist');
-
-      const envPath = path
-        .slice(index + 1)
-        .join('\\')
-        .replace('.lua', '')
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
-        .replaceAll('\\', '.');
+      const path = file.outputPath
+        .replace(/.*[/\\]dist[/\\]/, '')
+        .replace(/[/\\]/g, '.')
+        .replace('.lua', '');
 
       file.code = file.code.replace(
         toReplace,
-        `${basePopulate}        ["${envPath}"] = ____exports,${endPopulate}`
+        `${basePopulate}        ["${path}"] = ____exports,${endPopulate}`
       );
     }
   },
