@@ -2,9 +2,7 @@ import { env } from 'process';
 import ts from 'typescript';
 import * as tstl from 'typescript-to-lua';
 
-const basePopulate = 'awful.Populate(\n    {\n';
-
-const endPopulate = `    },\n    ${env.PROJECT_NAME},\n    getfenv(1)\n)`;
+const populate = `\nawful.Populate(\n    {\n        ["lualib_bundle"] = ____exports,\n    },\n    ${env.PROJECT_NAME},\n    getfenv(1)\n)`;
 
 const plugin: tstl.Plugin = {
   beforeEmit(
@@ -26,9 +24,7 @@ const plugin: tstl.Plugin = {
         const newContent = toReplace.replace('return', 'local ____exports =');
 
         file.code = file.code.replace(toReplace, newContent);
-        file.code =
-          file.code +
-          `\n${basePopulate}        ["lualib_bundle"] = ____exports,\n${endPopulate}`;
+        file.code += populate;
       }
     }
   },

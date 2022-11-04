@@ -18,13 +18,15 @@ const plugin: tstl.Plugin = {
     void options;
     void emitHost;
 
-    const distPath = emitHost.getCurrentDirectory() + '\\dist\\';
-
     for (const file of result) {
       if (!file.code.includes(toReplace)) continue;
 
-      const filePath = file.outputPath
-        .replace(distPath, '')
+      const path = file.outputPath.split('\\');
+      const index = path.indexOf('dist');
+
+      const envPath = path
+        .slice(index + 1)
+        .join('\\')
         .replace('.lua', '')
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
@@ -32,7 +34,7 @@ const plugin: tstl.Plugin = {
 
       file.code = file.code.replace(
         toReplace,
-        `${basePopulate}        ["${filePath}"] = ____exports,${endPopulate}`
+        `${basePopulate}        ["${envPath}"] = ____exports,${endPopulate}`
       );
     }
   },
