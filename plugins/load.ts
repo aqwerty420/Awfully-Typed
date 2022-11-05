@@ -1,8 +1,9 @@
 import ts from 'typescript';
 import * as tstl from 'typescript-to-lua';
 import * as fs from 'fs';
+import * as path from 'node:path';
 
-const outputPath = 'dist';
+const configFile = 'awful-config.json';
 
 const plugin: tstl.Plugin = {
   beforeEmit(
@@ -14,15 +15,14 @@ const plugin: tstl.Plugin = {
     void options;
     void emitHost;
 
-    try {
-      if (!fs.existsSync(outputPath)) {
-        fs.mkdirSync(outputPath);
-      }
-      fs.copyFileSync('awful-config.json', outputPath + '/awful-config.json');
-    } catch (err) {
-      console.error("Error occurred while copying 'awful-config.json'!", err);
-      throw err;
+    if (!options.outDir)
+      throw new Error("No 'outDir' specified in compiler options !");
+
+    if (!fs.existsSync(options.outDir)) {
+      fs.mkdirSync(options.outDir);
     }
+
+    fs.copyFileSync(configFile, path.join(options.outDir, configFile));
   },
 };
 
