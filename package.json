@@ -5,7 +5,6 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production PROJECT_NAME=myWork tstl",
     "dev": "cross-env PROJECT_NAME=myWork tstl --watch",
-    "prepare": "husky install",
     "clean": "rimraf dist/*"
   },
   "dependencies": {
