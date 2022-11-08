@@ -1,9 +1,3 @@
 {
-  "load": [
-    "lualib_bundle",
-    "system",
-    "spells",
-    "gui",
-    "myWork"
-  ]
+  "load": ["lualib_bundle", "system", "spells", "gui", "myWork"]
 }
