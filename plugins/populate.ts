@@ -6,7 +6,7 @@ import * as path from 'node:path';
 const basePopulate = 'awful.Populate(\n    {\n';
 const endPopulate = `\n    },\n    ${env.PROJECT_NAME},\n    getfenv(1)\n)`;
 
-const toReplace = 'return ____exports';
+const toReplace = 'return ____exports\n';
 
 const plugin: tstl.Plugin = {
   beforeEmit(
@@ -35,7 +35,7 @@ const plugin: tstl.Plugin = {
 
       file.code = file.code.replace(
         toReplace,
-        `${basePopulate}        ["${path}"] = ____exports,${endPopulate}`
+        `${basePopulate}        ["${path}"] = ____exports,${endPopulate}\n`
       );
     }
   },
