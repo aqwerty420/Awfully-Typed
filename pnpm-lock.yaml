@@ -5,7 +5,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': 5.44.0
   '@typescript-eslint/parser': 5.44.0
   '@typescript-to-lua/language-extensions': 1.0.0
-  awful-types: 1.5.17
+  awful-types: 1.5.18
   cross-env: 7.0.3
   eslint: 8.28.0
   eslint-config-prettier: 8.5.0
@@ -21,7 +21,7 @@ specifiers:
 
 dependencies:
   '@typescript-to-lua/language-extensions': 1.0.0
-  awful-types: 1.5.17_@types+node@18.11.9
+  awful-types: 1.5.18_@types+node@18.11.9
   cross-env: 7.0.3
   lua-types: 2.13.0
   ts-node: 10.9.1_wup25etrarvlqkprac7h35hj7u
@@ -365,8 +365,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /awful-types/1.5.17_@types+node@18.11.9:
-    resolution: {integrity: sha512-TMLEGW2sYeTbFXdgSSTgHNZhU6An/d+to5PsJqiklN3Z9n0IcU76UpSXn1GR5Q2kL8341iTbIeArXeuTQxKTFA==}
+  /awful-types/1.5.18_@types+node@18.11.9:
+    resolution: {integrity: sha512-vZbInZj4SJBHlTTrgm2FNHPB4BCJ+Pfd/nng12v43J2yM02l9hGFhjm1mPnhY0OrTQs4wxKKuYr0DNY8c5i6rA==}
     dependencies:
       '@typescript-to-lua/language-extensions': 1.0.0
       lua-types: 2.13.0
