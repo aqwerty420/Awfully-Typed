@@ -1,4 +1,3 @@
-import { env } from 'process';
 import ts from 'typescript';
 import * as tstl from 'typescript-to-lua';
 
@@ -9,6 +8,7 @@ const protectedList = [
   'PetAttack',
   'AttackTarget',
   'UseItemByName',
+  'StartAttack',
 ];
 
 const plugin: tstl.Plugin = {
@@ -26,12 +26,12 @@ const plugin: tstl.Plugin = {
       for (const protectedFunction of protectedList) {
         file.code = file.code.replace(
           new RegExp(`(${protectedFunction}\\(\\))`, 'g'),
-          `${env.PROJECT_NAME}.system.callProtectedFunction("${protectedFunction}")`
+          `awful.call("${protectedFunction}")`
         );
 
         file.code = file.code.replace(
           new RegExp(`(${protectedFunction}\\()`, 'g'),
-          `${env.PROJECT_NAME}.system.callProtectedFunction("${protectedFunction}", `
+          `awful.call("${protectedFunction}", `
         );
       }
     }
