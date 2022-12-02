@@ -9,6 +9,23 @@ const protectedList = [
   'AttackTarget',
   'UseItemByName',
   'StartAttack',
+  'UnitSpellHaste',
+  'GetPowerRegen',
+  'UnitDetailedThreatSituation',
+  'UnitAffectingCombat',
+  'UnitChannelInfo',
+  'UnitPower',
+  'GetInventoryItemCooldown',
+  'GetInventoryItemLink',
+  'IsSpellInRange',
+  'UnitGUID',
+  'UnitIsTapDenied',
+  'UnitCreatureType',
+  'UnitIsUnit',
+  'UnitExists',
+  'UnitClass',
+  'UnitRace',
+  'UnitAura',
 ];
 
 const plugin: tstl.Plugin = {
