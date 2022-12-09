@@ -5,7 +5,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': 5.45.0
   '@typescript-eslint/parser': 5.45.0
   '@typescript-to-lua/language-extensions': 1.0.0
-  awful-types: 1.5.19
+  awful-types: 1.6.1
   cross-env: 7.0.3
   eslint: 8.29.0
   eslint-config-prettier: 8.5.0
@@ -21,7 +21,7 @@ specifiers:
 
 dependencies:
   '@typescript-to-lua/language-extensions': 1.0.0
-  awful-types: 1.5.19_@types+node@18.11.11
+  awful-types: 1.6.1_@types+node@18.11.11
   cross-env: 7.0.3
   lua-types: 2.13.1
   ts-node: 10.9.1_zhirybrk4zoofuxp64necizyzy
@@ -365,14 +365,14 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /awful-types/1.5.19_@types+node@18.11.11:
-    resolution: {integrity: sha512-v+fS7POuT6BKbvoBUEgGPTXVm7NTnxIp5tIZQTwbATCrApNbMJvh/xe++DFkZ8KrmJNcEx2bUEmh7fBijsFq/A==}
+  /awful-types/1.6.1_@types+node@18.11.11:
+    resolution: {integrity: sha512-qFyA0GlmX8NL63nbslOJ5vXsfpIrC3Y0iUS3/dOQdYC/S59EekIRj2s73dlTn4rvFQJ+TchV5qnV0O+hgOj3Tw==}
     dependencies:
       '@typescript-to-lua/language-extensions': 1.0.0
       lua-types: 2.13.0
       ts-node: 10.9.1_5wyqbr5ddly62zcv3ehcsfny4y
       typescript: 4.8.4
-      typescript-to-lua: 1.10.1_typescript@4.8.4
+      typescript-to-lua: 1.11.1_typescript@4.8.4
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
@@ -1524,12 +1524,12 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /typescript-to-lua/1.10.1_typescript@4.8.4:
-    resolution: {integrity: sha512-R6KQc1YzFcejyaZ9tAvVK0MFTlRS1b10vON5sxjtGVSUWl+W4KRLik0LDCgKfI0wnDQH+LNVnKBNUsBfTtEoQQ==}
+  /typescript-to-lua/1.11.1_typescript@4.8.4:
+    resolution: {integrity: sha512-XxGOf0zBRrMocGr4BbVaJdnvnk4yTrUs0BCdamfb/Qg94hKZg8ydRUy17ZtHZfYmnwFupR88R5DZXIpHYP0S5g==}
     engines: {node: '>=16.10.0'}
     hasBin: true
     peerDependencies:
-      typescript: ~4.8.2
+      typescript: ~4.9.3
     dependencies:
       '@typescript-to-lua/language-extensions': 1.0.0
       enhanced-resolve: 5.10.0
