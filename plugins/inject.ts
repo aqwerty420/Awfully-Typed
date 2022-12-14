@@ -2,7 +2,7 @@ import { env } from 'process';
 import ts from 'typescript';
 import * as tstl from 'typescript-to-lua';
 
-const toInject = `local Unlocker, awful, ${env.PROJECT_NAME} = ...\n\n`;
+const toInject = `local Unlocker, awful, ${env.PROJECT_NAME} = ...\n`;
 
 const plugin: tstl.Plugin = {
   beforeEmit(
