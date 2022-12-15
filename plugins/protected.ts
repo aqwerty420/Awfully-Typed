@@ -26,6 +26,7 @@ const protectedList = [
   'UnitClass',
   'UnitRace',
   'UnitAura',
+  'UnitThreatSituation',
 ];
 
 const plugin: tstl.Plugin = {
