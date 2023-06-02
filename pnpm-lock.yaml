@@ -14,7 +14,7 @@ specifiers:
   prettier: 2.8.1
   rimraf: 3.0.2
   ts-node: 10.9.1
-  tslib: 2.4.1
+  tslib: 2.5.3
   typescript: 4.9.4
   typescript-to-lua: 1.11.1
 
@@ -36,7 +36,7 @@ devDependencies:
   eslint-plugin-prettier: 4.2.1_kl4pe43v5b43npmso5hoplpbyi
   prettier: 2.8.1
   rimraf: 3.0.2
-  tslib: 2.4.1
+  tslib: 2.5.3
 
 packages:
 
@@ -1126,8 +1126,8 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
 
-  /tslib/2.4.1:
-    resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
+  /tslib/2.5.3:
+    resolution: {integrity: sha512-mSxlJJwl3BMEQCUNnxXBU9jP4JBktcEGhURcPR6VQVlnP0FdDEsIaz0C35dXNGLyRfrATNofF0F5p2KPxQgB+w==}
     dev: true
 
   /tsutils/3.21.0_typescript@4.9.4:
