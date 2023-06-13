@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@types/node': 18.11.18
+  '@types/node': 18.16.18
   '@typescript-eslint/eslint-plugin': 5.47.1
   '@typescript-eslint/parser': 5.47.1
   '@typescript-to-lua/language-extensions': 1.0.0
@@ -20,15 +20,15 @@ specifiers:
 
 dependencies:
   '@typescript-to-lua/language-extensions': 1.0.0
-  awful-types: 1.6.8_@types+node@18.11.18
+  awful-types: 1.6.8_@types+node@18.16.18
   cross-env: 7.0.3
   lua-types: 2.13.1
-  ts-node: 10.9.1_awa2wsr5thmg3i7jqycphctjfq
+  ts-node: 10.9.1_e65hc4reaonzqh4mu3k7yqskti
   typescript: 4.9.4
   typescript-to-lua: 1.11.1_typescript@4.9.4
 
 devDependencies:
-  '@types/node': 18.11.18
+  '@types/node': 18.16.18
   '@typescript-eslint/eslint-plugin': 5.47.1_txmweb6yn7coi7nfrp22gpyqmy
   '@typescript-eslint/parser': 5.47.1_lzzuuodtsqwxnvqeq4g4likcqa
   eslint: 8.30.0
@@ -141,8 +141,8 @@ packages:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: true
 
-  /@types/node/18.11.18:
-    resolution: {integrity: sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==}
+  /@types/node/18.16.18:
+    resolution: {integrity: sha512-/aNaQZD0+iSBAGnvvN2Cx92HqE5sZCPZtx2TsK+4nvV23fFe09jVDvpArXr2j9DnYlzuU9WuoykDDc6wqvpNcw==}
 
   /@types/semver/7.3.13:
     resolution: {integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==}
@@ -333,12 +333,12 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /awful-types/1.6.8_@types+node@18.11.18:
+  /awful-types/1.6.8_@types+node@18.16.18:
     resolution: {integrity: sha512-bnMXVZxZs92C+CR6ld4fzqxDH0d23gEuoa0ycoMRBGIx0nlt6zurK1/uFF414Ksj/uipE3ocZvsND2KFDe1myg==}
     dependencies:
       '@typescript-to-lua/language-extensions': 1.0.0
       lua-types: 2.13.1
-      ts-node: 10.9.1_awa2wsr5thmg3i7jqycphctjfq
+      ts-node: 10.9.1_e65hc4reaonzqh4mu3k7yqskti
       typescript: 4.9.4
       typescript-to-lua: 1.11.1_typescript@4.9.4
     transitivePeerDependencies:
@@ -1091,7 +1091,7 @@ packages:
       is-number: 7.0.0
     dev: true
 
-  /ts-node/10.9.1_awa2wsr5thmg3i7jqycphctjfq:
+  /ts-node/10.9.1_e65hc4reaonzqh4mu3k7yqskti:
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -1110,7 +1110,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.3
-      '@types/node': 18.11.18
+      '@types/node': 18.16.18
       acorn: 8.8.1
       acorn-walk: 8.2.0
       arg: 4.1.3
