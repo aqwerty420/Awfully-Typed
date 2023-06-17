@@ -15,6 +15,7 @@
     "noImplicitSelf": true,
     "noImplicitGlobalVariables": true,
     "luaTarget": "5.1",
+    "luaBundleEntry": "src/myWork.ts",
     "luaBundle": "myWork.lua",
     "luaLibImport": "require-minimal",
     "luaPlugins": [
