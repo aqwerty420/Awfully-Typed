@@ -1,28 +1,27 @@
 import ts from 'typescript';
 import * as tstl from 'typescript-to-lua';
 import * as fs from 'fs';
-import * as path from 'node:path';
 
-const configFile = 'awful-config.json';
+const fileName = 'awful-config.json';
 
 const plugin: tstl.Plugin = {
-  beforeEmit(
-    program: ts.Program,
-    options: tstl.CompilerOptions,
-    emitHost: tstl.EmitHost
-  ) {
+  beforeEmit(program: ts.Program, options: tstl.CompilerOptions) {
     void program;
-    void options;
-    void emitHost;
 
-    if (!options.outDir)
-      throw new Error("No 'outDir' specified in compiler options !");
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    const outDir = options.outDir!;
+    const filePath = `./${fileName}`;
+    const fileOutputPath = `${outDir}/${fileName}`;
 
-    if (!fs.existsSync(options.outDir)) {
-      fs.mkdirSync(options.outDir);
+    try {
+      if (!fs.existsSync(outDir)) {
+        fs.mkdirSync(outDir);
+      }
+      fs.copyFileSync(filePath, fileOutputPath);
+    } catch (err) {
+      console.error(`Error occurred while copying '${fileName}' !`, err);
+      throw err;
     }
-
-    fs.copyFileSync(configFile, path.join(options.outDir, configFile));
   },
 };
 

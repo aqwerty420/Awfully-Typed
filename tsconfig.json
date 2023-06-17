@@ -15,20 +15,15 @@
     "noImplicitSelf": true,
     "noImplicitGlobalVariables": true,
     "luaTarget": "5.1",
-    "luaLibImport": "require",
+    "luaBundle": "myWork.lua",
+    "luaLibImport": "require-minimal",
     "luaPlugins": [
-      // Inject Unlocker, awful, project
+      // Inject Awful
       { "name": "./plugins/inject.ts" },
-      // Handle lua require to awful env
-      { "name": "./plugins/require.ts" },
-      // Handle awful populate
-      { "name": "./plugins/populate.ts" },
       // Wrap protected functions calls
       { "name": "./plugins/protected.ts" },
-      // Populate lualib to awful
-      { "name": "./plugins/lualib.ts" },
       // Copy loader
-      { "name": "./plugins/load.ts" }
+      { "name": "./plugins/load.ts" },
     ]
   },
   "exclude": ["plugins/**/*", "node_modules/**/*", "dist/**/*"]

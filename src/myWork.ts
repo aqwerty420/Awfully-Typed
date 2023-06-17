@@ -34,4 +34,15 @@ myWork.warrior.fury.Init(() => {
 
   spells.Whirlwind();
 });
-export {};
+
+export const test = () => {
+  const a = 1;
+};
+
+const test2 = () => {
+  const a = 1;
+};
+
+export const func = {
+  test,
+};
