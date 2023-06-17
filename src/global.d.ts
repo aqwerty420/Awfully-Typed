@@ -1,6 +1,6 @@
 interface IMyWork {
   warrior: {
-    fury: IAwfulSpecialization;
+    fury: AwfulSpecialization;
   };
 }
 
